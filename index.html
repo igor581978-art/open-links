@@ -5,18 +5,27 @@
 <title>Open YouTube Channels</title>
 <script>
 function openAll() {
-  window.open('https://www.youtube.com/@d.yelisevych/videos','_blank');
-  window.open('https://www.youtube.com/@Taras_Lawyer/videos','_blank');
-  window.open('https://www.youtube.com/@DubinizmTV','_blank');
-  window.open('https://tinyurl.com/4sytecma','_blank');
-  window.open('https://www.youtube.com/@LISOVSKIY_NEWS/videos','_blank');
-  window.open('https://tinyurl.com/57en7fvu','_blank');
-  window.open('https://www.youtube.com/@shelestSHUM/videos','_blank');
+  const links = [
+    'https://www.youtube.com/@d.yelisevych/videos',
+    'https://www.youtube.com/@Taras_Lawyer/videos',
+    'https://www.youtube.com/@DubinizmTV',
+    'https://tinyurl.com/4sytecma',
+    'https://www.youtube.com/@LISOVSKIY_NEWS/videos',
+    'https://tinyurl.com/57en7fvu',
+    'https://www.youtube.com/@shelestSHUM/videos'
+  ];
+  
+  links.forEach(link => {
+    window.open(link, '_blank');
+  });
 }
 </script>
 </head>
 
-<body onload="openAll()">
-<h1>Открываю все каналы…</h1>
+<body>
+  <h1>Все каналы готовы к открытию</h1>
+  <button onclick="openAll()" style="padding: 15px 30px; font-size: 20px; cursor: pointer;">
+    Открыть все каналы
+  </button>
 </body>
 </html>
